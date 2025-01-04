@@ -6,7 +6,6 @@
 #include <format>
 #include <fstream>
 #include <map>
-#include <ranges>
 
 typedef long double number_t; // Internal Number Type
 #define ston(...) static_cast<number_t>(std::stold(__VA_ARGS__)) // String to number_t conversion
