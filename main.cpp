@@ -91,8 +91,9 @@ bool processParenthetical(const std::string& str, const char openChar, const cha
         else if (c == closeChar) num_parens--;
 
         if (num_parens == 0) {
-            // Allow the user to pass the same value to str as to expr
-            // Calculating `expr` here ensures that when we overwrite `rest`, we can still calculate `expr`
+            // Allow the user to pass the same value to `str` as to `rest`
+            // Calculating `expr` here ensures that when we overwrite `rest`, we can still calculate `expr` based on the
+            // original value of `str`
             const std::string expression = str.substr(1, i - 1);
             rest = str.substr(i + 1);
             expr = expression;
