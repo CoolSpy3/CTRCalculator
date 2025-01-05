@@ -81,7 +81,7 @@ inline std::string eraseWhitespace(std::string s) {
  */
 bool processParenthetical(const std::string& str, const char openChar, const char closeChar,
                           std::string& expr, std::string& rest) {
-    if (!str.front() == openChar)
+    if (str.front() != openChar)
         return false;
 
     size_t num_parens = 0;
