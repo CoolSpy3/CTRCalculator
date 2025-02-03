@@ -212,7 +212,7 @@ if (stack.empty()) NOT_ENOUGH_ARGS; \
             stack.push_back(pop_back() + pop_back());
         } else if (input == "-") {
             if (stack.size() < 2) NOT_ENOUGH_ARGS;
-            stack.push_back(pop_back() - pop_back());
+            stack.push_back(-(pop_back() - pop_back()));
         } else if (input == "*") {
             if (stack.size() < 2) NOT_ENOUGH_ARGS;
             stack.push_back(pop_back() * pop_back());
